@@ -15,3 +15,13 @@ client = openai.OpenAI()
 
 model = "gpt-4o"
 
+# Set title of the app
+st.title("Echo Bot")
+
+# Create a text input for the user to type their message
+user_input = st.text_input("You", "")
+
+# Create a button that user can click to submit their message
+if st.button("Send"):
+    st.text(f"Echo: {user_input}")
+
